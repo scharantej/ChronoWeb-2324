@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart Time Planner</title>
+</head>
+<body>
+<h1>Smart Time Planner</h1>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Time Slot</th>
+</tr>
+</thead>
+<tbody>
+{% for task in planner.tasks %}
+<tr>
+<td>{{ task.title }}</td>
+<td>{{ planner.time_slots[loop.index0].start_time }} - {{ planner.time_slots[loop.index0].end_time }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>
+
