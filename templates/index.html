@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart Time</title>
+</head>
+<body>
+<h1>Smart Time</h1>
+<p>Effortlessly manage your time with Smart Time. Input your tasks and time availability, and our intelligent algorithms will create a personalized planner that optimizes your schedule.</p>
+<form action="/generate-planner" method="post">
+<label for="tasks">Tasks:</label>
+<select name="tasks" multiple>
+{% for task in tasks %}
+<option value="{{ task.id }}">{{ task.title }}</option>
+{% endfor %}
+</select><br>
+<label for="time_slots">Time Slots:</label>
+<select name="time_slots" multiple>
+{% for time_slot in time_slots %}
+<option value="{{ time_slot.id }}">{{ time_slot.start_time }} - {{ time_slot.end_time }}</option>
+{% endfor %}
+</select><br>
+<input type="submit" value="Generate Planner">
+</form>
+</body>
+</html>
+
+
