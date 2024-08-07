@@ -1,0 +1,8 @@
+- Flask>=2.0
+- Jinja2>=3.0
+- Werkzeug>=2.0
+- Itsdangerous>=2.0
+- Click>=8.0
+- MarkupSafe>=2.0
+- ConfigObj>=5.0
+- gunicorn>=20.0
